@@ -19,7 +19,6 @@ angular.module('myApp.ideas')
                 .then(function(result) {
                     $scope.ideas = $filter('filter')($scope.ideas, function (value, index, array) {
                         return value.id != id;
-
                     })
                 }, function(error) {
                     console.log('error', error);

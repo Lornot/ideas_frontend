@@ -15,16 +15,16 @@ angular.module('myApp.ideas')
                 return $http.get(ROOT_URL+'get_all');
             }
             
-            function post(blogPost) {
-                return $http.post('http://sa/web/app_dev.php/post', blogPost)
+            function post(idea) {
+                return $http.post(ROOT_URL+'add', idea)
             }
 
             function put(id, data) {
-                return $http.put(ROOT_URL+'put/'+id, data)
+                return $http.put(ROOT_URL+'update/'+id, data)
             }
 
             function remove(id) {
-                return $http.delete(ROOT_URL+'delete/'+id)
+                return $http.delete(ROOT_URL+'remove/'+id)
             }
 
             return {

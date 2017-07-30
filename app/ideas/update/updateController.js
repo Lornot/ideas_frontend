@@ -7,11 +7,11 @@ angular.module('myApp.ideas')
         '$window',
         '$routeParams',
         function ($scope, Api, $window, $routeParams) {
-            $scope.ideas = {};
+            $scope.idea = {};
             Api.get($routeParams.id)
                 .then(function(result) {
                     console.log('result', result);
-                    $scope.ideas = result.data;
+                    $scope.idea = result.data;
                 }, function (error) {
                     console.log('error', error)
                 });
