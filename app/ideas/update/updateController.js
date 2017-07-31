@@ -15,7 +15,7 @@ angular.module('myApp.ideas')
                 }, function (error) {
                     console.log('error', error)
                 });
-
+            
             $scope.update = function(ideas) {
                 Api.put(ideas.id, ideas)
                     .then(function (response) {
